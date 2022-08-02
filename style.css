@@ -35,7 +35,7 @@ body {
 
 img {
     position: relative;
-    width: 50%;
+    height: 100%;
     border-radius: 2% 0 0 2%;
 
 }
@@ -67,7 +67,7 @@ h1 {
 .without {
     font-family: 'Montserrat', sans-serif;
     color: var(--Dark-grayish-blue);
-    font-size: 14px;
+    font-size: 0.875rem;
 
 }
 
@@ -105,7 +105,9 @@ button {
     justify-content: center;
     align-items: center;
 }
-
+.p-btn{
+    padding: 0.5rem;
+}
 button:hover {
     background-color: var(--Very-dark-blue);
     cursor: pointer;
@@ -113,7 +115,7 @@ button:hover {
 
 .attribution {
     padding-top: 2rem;
-    font-size: 11px;
+    font-size: 0.688rem;
     text-align: center;
 }
 
@@ -123,15 +125,19 @@ button:hover {
 
 @media (max-width:375px) {
     body {
+        position:absolute;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        max-height: 881px;
     }
 
     .card {
-        width: 90%;
-        border: 2px solid red;
+        position: relative;
+        max-width: 90%;
+        height: 90%;
         display: flex;
         flex-direction: column;
     }
@@ -139,7 +145,19 @@ button:hover {
     img {
         position: relative;
         width: 100%;
-        height: 50%;
-
+        border-radius: 2% 2% 0 0;
     }
+    .description-card {
+        position: relative;
+        /* border: red 2px solid; */
+        margin-bottom: -1rem;
+        margin-top: -0.5rem;
+    }
+    h1{
+        font-size: 1.9rem;
+    }
+    button{
+        margin-top: -1rem;
+    }
+    
 }
